@@ -9,6 +9,7 @@ legendre_polynomials_roots = {
     '6': [-0.9324695142, -0.6612093865, -0.2386191861, 0.2386191861, 0.6612093865, 0.9324695142]
 }
 
+# Lagrange polynomials value.
 def f_lagrange(x_i, x_list : list, x):
     prod = 1
     for i in range(len(x_list)):
@@ -62,7 +63,7 @@ def false_position(p0, p1, tol, N0, f):
         q1 = q
     return "Method failed after N0 iterations"
 
-def difference_table(x_list, y_list):
+def difference_table(x_list, y_list)->list:
     # NOTE: This is only difference table and NOT divided difference table
 
     # we would be creating a list of lists for the forward difference table: [[.], [.,.], [.,.,.], [.,.,.,.], ......so on]
